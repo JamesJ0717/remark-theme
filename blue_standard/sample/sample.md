@@ -97,7 +97,7 @@ Please check the next 2 slides.
 
 ## Sample of image (2)
 
-.large[![Sample Image](sample.jpg)]
+.center.large[![Sample Image](sample.jpg)]
 
 ---
 
