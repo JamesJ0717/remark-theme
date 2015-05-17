@@ -142,12 +142,16 @@ body {
 .remark-slide-content ul>li {
     list-style: none;
     position: relative;
+    margin: 0.4em 0;
 }
 .remark-slide-content ul>li::before {
     content: "＊";
     position: absolute;
     left: -1.3em;
     color: #c0392b;
+}
+.remark-slide-content ol>li {
+    margin: 0.4em 0;
 }
 
 /*
