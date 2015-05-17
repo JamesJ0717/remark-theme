@@ -5,13 +5,19 @@
 body {
     font-family: 'Helvetica Neue Light', 'Helvetica Light', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', 'Meiryo', sans-serif;
 }
-h1, h2, h3 {
+.remark-slide-content h1,
+.remark-slide-content h2,
+.remark-slide-content h3 {
     font-weight: normal;
 }
-h3, h4, h5, p {
+.remark-slide-content h3,
+.remark-slide-content h4,
+.remark-slide-content h5,
+.remark-slide-content p {
     margin: 0.5em 0;
 }
-.remark-code, .remark-inline-code {
+.remark-code,
+.remark-inline-code {
     font-family: 'Ubuntu Mono';
 }
 
@@ -88,17 +94,17 @@ h3, h4, h5, p {
 /*
  * Bold text
  */
-.bold {
+.remark-slide-content .bold {
     font-weight: bold;
 }
 
 /*
  * Link text
  */
-a {
+.remark-slide-content a {
     color: #000;
 }
-a:hover {
+.remark-slide-content a:hover {
     color: #888;
 }
 .remark-slide-content.title a {
@@ -111,21 +117,21 @@ a:hover {
 /*
  * Quotation
  */
-.quote {
+.remark-slide-content .quote {
     font-family: serif;
     font-style: italic;
 }
-.quote::before {
+.remark-slide-content .quote::before {
     content: open-quote;
 }
-.quote::after {
+.remark-slide-content .quote::after {
     content: close-quote;
 }
 
 /*
  * Footnote
  */
-.footnote {
+.remark-slide-content .footnote {
     color: #888;
     font-size: 0.7em;
 }
@@ -133,11 +139,11 @@ a:hover {
 /*
  * Listing style
  */
-ul>li {
+.remark-slide-content ul>li {
     list-style: none;
     position: relative;
 }
-ul>li::before {
+.remark-slide-content ul>li::before {
     content: "＊";
     position: absolute;
     left: -1.3em;
@@ -157,39 +163,40 @@ ul>li::before {
 /*
  * Table
  */
-table {
+.remark-slide-content table {
     border-collapse: separate;
     border-spacing: 2px;
 }
-table th, td {
+.remark-slide-content table th,
+.remark-slide-content table td {
     padding: 0.7em;
     background-color: #ddd;
 }
-table th:first-child {
+.remark-slide-content table th:first-child {
     border-radius: 10px 0 0 0;
 }
-table th:last-child {
+.remark-slide-content table th:last-child {
     border-radius: 0 10px 0 0;
 }
-table tr:last-child td:first-child {
+.remark-slide-content table tr:last-child td:first-child {
     border-radius: 0 0 0 10px;
 }
-table tr:last-child td:last-child {
+.remark-slide-content table tr:last-child td:last-child {
     border-radius: 0 0 10px 0;
 }
 
 /*
  * Image sizing
  */
-.small img {
+.remark-slide-content .small img {
     max-height: 10em;
     min-height: 10em;
 }
-.middle img {
+.remark-slide-content .middle img {
     max-height: 15em;
     min-height: 15em;
 }
-.large img {
+.remark-slide-content .large img {
     max-height: 20em;
     min-height: 20em;
 }
