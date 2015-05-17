@@ -54,6 +54,11 @@ body {
     z-index: 1;
     color: #fff;
 }
+.remark-slide-number {
+    font-size: 0.8em;
+    bottom: 0.1em;
+    right: 0.5em;
+}
 .remark-slide-content.title .remark-slide-number {
     color: #fff;
 }
