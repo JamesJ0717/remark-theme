@@ -150,6 +150,16 @@ body {
     left: -1.3em;
     color: #c0392b;
 }
+.remark-slide-content ul>li>ul>li::before {
+    content: "";
+    display: none;
+}
+.remark-slide-content ul>li>ul>li {
+    list-style-type: disc;
+}
+.remark-slide-content ul>li>ul>li>ul>li {
+    list-style-type: circle;
+}
 .remark-slide-content ol>li {
     margin: 0.4em 0;
 }
