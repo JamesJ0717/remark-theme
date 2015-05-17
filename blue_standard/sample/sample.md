@@ -17,9 +17,13 @@ In contrast to these heading, Level 4 heading creates more emphatic text.
 
 ### Level 3 Heading Sample
 
+.center[
 #### Level 4 Heading Sample
+]
 
-#### .red.center[Centered Level 4 Heading Sample]
+.center.inverted[
+#### Inverted Level 4 Heading Sample
+]
 
 ---
 
@@ -137,5 +141,9 @@ You can use designed table.
 | Column 1 | Column 2 | Column 3 | Column 4 |
 | -------- | -------- | -------- | -------- |
 | content 1-1 | content 1-2 | content 1-3 | content 1-4 |
-| content 2-1 | content 2-2 | content 2-3 | content 2-4 |
-| content 3-1 | content 3-2 | content 3-3 | content 3-4 |
+
+.inverted[
+| Column 1 | Column 2 | Column 3 | Column 4 |
+| -------- | -------- | -------- | -------- |
+| content 1-1 | content 1-2 | content 1-3 | content 1-4 |
+]

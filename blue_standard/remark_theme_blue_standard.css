@@ -102,6 +102,11 @@ body {
     background-color: #2ecc71;
     border-radius: 10px;
 }
+.remark-slide-content .inverted h4 {
+    background-color: transparent;
+    border: 3px #27ae60 solid;
+    color: #27ae60;
+}
 
 /*
  * Bold text
@@ -191,12 +196,31 @@ body {
  */
 .remark-slide-content table {
     border-collapse: separate;
-    border-spacing: 2px;
+    border-spacing: 3px;
+    margin: 1em 0;
 }
-.remark-slide-content table th,
+.remark-slide-content table th {
+    padding: 0.7em;
+    background-color: #7f8c8d;
+    color: #fff;
+    font-weight: normal;
+}
 .remark-slide-content table td {
     padding: 0.7em;
-    background-color: #ddd;
+    background-color: #ced4d8;
+}
+.remark-slide-content .inverted table {
+    border-spacing: 0px;
+}
+.remark-slide-content .inverted table th {
+    background-color: transparent;
+    border: 2px solid #ced4d8;
+    color: #000;
+    font-weight: bold;
+}
+.remark-slide-content .inverted table td {
+    background-color: transparent;
+    border: 2px solid #ced4d8;
 }
 .remark-slide-content table th:first-child {
     border-radius: 10px 0 0 0;
