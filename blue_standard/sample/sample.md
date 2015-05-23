@@ -61,6 +61,14 @@ Lorem ipsum dolor sit amet, consectetur .footnote[*1] adipiscing elit.
 
 ---
 
+## Vertical centered text
+
+.vertical-center.center[
+### You can also use vertical centered text easily.
+]
+
+---
+
 ## Listings
 
 ### Listing style

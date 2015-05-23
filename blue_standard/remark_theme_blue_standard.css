@@ -97,6 +97,37 @@ body {
 }
 
 /*
+ * Background image style
+ */
+.remark-slide-content {
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/*
+ * Vertical centered text
+ */
+.remark-slide-content .vertical-center {
+    display: table;
+    table-layout: fixed;
+    height: 85%;
+    width: 100%;
+}
+.remark-slide-content.blank .vertical-center {
+    height: 100%;
+}
+.remark-slide-content .vertical-center>* {
+    display: table-cell;
+    height: auto;
+    vertical-align: middle;
+}
+.remark-slide-content .vertical-center::before,
+.remark-slide-content .vertical-center::after {
+    display: table-row;
+    content: '';
+}
+
+/*
  * Emphasized text
  */
 .remark-slide-content h4 {
