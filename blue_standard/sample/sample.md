@@ -102,14 +102,14 @@ Please check the next 2 slides.
 
 ## Sample of image (1)
 
-.small[![Sample Image](sample.jpg)]
-.middle[![Sample Image](sample.jpg)]
+.small[![Sample Image](http://placekitten.com/200/240)]
+.middle[![Sample Image](http://placekitten.com/280/360)]
 
 ---
 
 ## Sample of image (2)
 
-.center.large[![Sample Image](sample.jpg)]
+.center.large[![Sample Image](http://placekitten.com/300/480)]
 
 ---
 
@@ -155,3 +155,21 @@ You can use designed table.
 | -------- | -------- | -------- | -------- |
 | content 1-1 | content 1-2 | content 1-3 | content 1-4 |
 ]
+
+---
+
+class: blank
+
+## Blank page
+
+You can create blank page.
+
+---
+
+class: blank inverted
+background-image: url(http://placekitten.com/900/680)
+
+## Background Image
+
+You can use the background image property of remark.js.
+Style of background image is set to the covered and centered in this theme.

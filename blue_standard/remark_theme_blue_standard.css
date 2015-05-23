@@ -95,6 +95,9 @@ body {
 .remark-slide-content h2 {
     font-size: 1.7em;
 }
+.remark-slide-content.inverted {
+    color: #fff;
+}
 
 /*
  * Background image style
