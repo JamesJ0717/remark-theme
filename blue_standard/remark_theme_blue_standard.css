@@ -398,3 +398,16 @@ body {
     max-height: 20em;
     min-height: 20em;
 }
+
+/*
+ * Horizontal layout
+ */
+.remark-slide-content .horizontal {
+    display: table;
+    width: 100%;
+}
+.remark-slide-content .horizontal>* {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1em;
+}
