@@ -60,6 +60,95 @@ body {
 }
 
 /*
+ * Font size class
+ */
+.remark-slide-content .font-small {
+    font-size: 0.7em;
+}
+.remark-slide-content .font-middle {
+    font-size: 1em;
+}
+.remark-slide-content .font-large {
+    font-size: 1.3em;
+}
+
+/*
+ * Margin class
+ */
+.remark-slide-content .margin-top-small {
+    margin-top: 1em;
+}
+.remark-slide-content .margin-top-middle {
+    margin-top: 2em;
+}
+.remark-slide-content .margin-top-large {
+    margin-top: 4em;
+}
+.remark-slide-content .margin-bottom-small {
+    margin-bottom: 1em;
+}
+.remark-slide-content .margin-bottom-middle {
+    margin-bottom: 2em;
+}
+.remark-slide-content .margin-bottom-large {
+    margin-bottom: 4em;
+}
+.remark-slide-content .margin-right-small {
+    margin-right: 1em;
+}
+.remark-slide-content .margin-right-middle {
+    margin-right: 2em;
+}
+.remark-slide-content .margin-right-large {
+    margin-right: 4em;
+}
+.remark-slide-content .margin-left-small {
+    margin-left: 1em;
+}
+.remark-slide-content .margin-left-middle {
+    margin-left: 2em;
+}
+.remark-slide-content .margin-left-large {
+    margin-left: 4em;
+}
+.remark-slide-content .padding-top-small {
+    padding-top: 1em;
+}
+.remark-slide-content .padding-top-middle {
+    padding-top: 2em;
+}
+.remark-slide-content .padding-top-large {
+    padding-top: 4em;
+}
+.remark-slide-content .padding-bottom-small {
+    padding-bottom: 1em;
+}
+.remark-slide-content .padding-bottom-middle {
+    padding-bottom: 2em;
+}
+.remark-slide-content .padding-bottom-large {
+    padding-bottom: 4em;
+}
+.remark-slide-content .padding-right-small {
+    padding-right: 1em;
+}
+.remark-slide-content .padding-right-middle {
+    padding-right: 2em;
+}
+.remark-slide-content .padding-right-large {
+    padding-right: 4em;
+}
+.remark-slide-content .padding-left-small {
+    padding-left: 1em;
+}
+.remark-slide-content .padding-left-middle {
+    padding-left: 2em;
+}
+.remark-slide-content .padding-left-large {
+    padding-left: 4em;
+}
+
+/*
  * Title page style
  */
 .remark-slide-content.title {
@@ -252,7 +341,6 @@ body {
 .remark-slide-content table {
     width: 100%;
     margin: 1em 0;
-    font-size: 0.7em;
     border-collapse: separate;
     border-spacing: 3px;
 }
