@@ -311,11 +311,11 @@ $imageSizes: 10em, 15em, 20em
    * Arrow icon
    */
   $size: 24
-  $arrowUp: up, ($size - 1), -($size / 2)
-  $arrowDown: down, -($size * 2 - 1), -($size / 2)
-  $arrowRight: right, -($size / 2), -($size * 2 - 1)
-  $arrowLeft: left, -($size / 2), $size * 2
-  @each $name, $top, $left in $arrowUp, $arrowDown, $arrowRight, $arrowLeft
+  $arrowUp: up, bottom, ($size - 1), -($size / 2)
+  $arrowDown: down, top, -($size * 2 - 1), -($size / 2)
+  $arrowRight: right, left, -($size / 2), -($size * 2 - 1)
+  $arrowLeft: left, right, -($size / 2), $size
+  @each $name, $border, $top, $left in $arrowUp, $arrowDown, $arrowRight, $arrowLeft
     .arrow-#{$name}
       display: block
       position: relative
@@ -323,7 +323,7 @@ $imageSizes: 10em, 15em, 20em
       height: 0
       left: #{$size}px
       border: #{$size}px solid transparent
-      border-bottom-color: #27ae60
+      border-#{$border}-color: #27ae60
       &::after
         content: ""
         position: absolute
