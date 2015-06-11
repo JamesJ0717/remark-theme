@@ -92,24 +92,14 @@ You can use designed listing style.
 
 ### Image size
 
-You can control the size of images with simple directives.
+You can add images easily.
 
 ### Sample
 
-Please check the next 2 slides.
-
----
-
-## Sample of image (1)
-
-.small[![Sample Image](http://placekitten.com/200/240)]
-.middle[![Sample Image](http://placekitten.com/280/360)]
-
----
-
-## Sample of image (2)
-
-.center.large[![Sample Image](http://placekitten.com/300/480)]
+.center[
+.image-tiny[![Sample Image](http://placekitten.com/200/240)]
+.image-small[![Sample Image](http://placekitten.com/200/240)]
+]
 
 ---
 
