@@ -292,9 +292,9 @@ $imageSizes: 10em, 15em, 20em
       max-height: nth($imageSizes, $i)
       min-height: nth($imageSizes, $i)
     $i: $i + 1
-  // margin and padding size
   $i: 1
   @each $position in $positionNames
+    // margin and padding size
     @each $size in $sizeNames
       .margin-#{$position}-#{$size}
         margin-#{$position}: nth($marginSizes, $i)
@@ -302,6 +302,10 @@ $imageSizes: 10em, 15em, 20em
         padding-#{$position}: nth($paddingSizes, $i)
       $i: $i + 1
     $i: 1
+    // fixed positions
+    .fixed-#{$position}
+      position: fixed
+      #{$position}: 0
 
 /*
  * Icons
