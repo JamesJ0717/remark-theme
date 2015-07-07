@@ -1,0 +1,66 @@
+/*
+ * Decorative classes
+ */
+.remark-slide-content
+  /*
+   * Vertical centered text
+   */
+  .vertical-center
+    display: table
+    table-layout: fixed
+    height: 85%
+    width: 100%
+    &::before,
+    &::after
+      display: table-row
+      content: ''
+    >*
+      display: table-cell
+      height: auto
+      vertical-align: middle
+  &.blank
+    .vertical-center
+      height: 100%
+  /*
+   * Bold text
+   */
+  .bold
+    font-weight: bold
+  /*
+   * Quotation
+   */
+  .quote
+    font-family: serif
+    font-style: italic
+    &::before
+      content: open-quote
+    &::after
+      content: close-quote
+  /*
+   * Footnote
+   */
+  .footnote
+    color: #888
+    font-size: 0.7em
+  /*
+   * Horizontal layout
+   */
+  .horizontal
+    display: table
+    width: 100%
+    >*
+      display: table-cell
+      vertical-align: middle
+      padding: 1em
+  /*
+   * Image sizing (Deprecated)
+   */
+  .small img
+    max-height: 10em
+    min-height: 10em
+  .middle img
+    max-height: 15em
+    min-height: 15em
+  .large img
+    max-height: 20em
+    min-height: 20em

@@ -7,6 +7,10 @@ gulp.task('sass', function() {
         .pipe(sass())
         .pipe(minify())
         .pipe(gulp.dest('./blue_standard/'));
+    gulp.src('./src/remark_theme_modern_japanese.sass')
+        .pipe(sass())
+        .pipe(minify())
+        .pipe(gulp.dest('./modern_japanese/'));
 });
 
 gulp.task('default', function() {

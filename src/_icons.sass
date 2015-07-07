@@ -1,0 +1,29 @@
+/*
+ * Icons
+ */
+.remark-slide-content
+  /*
+   * Arrow icon
+   */
+  $size: 24
+  $arrowUp: up, bottom, ($size - 1), -($size / 2)
+  $arrowDown: down, top, -($size * 2 - 1), -($size / 2)
+  $arrowRight: right, left, -($size / 2), -($size * 2 - 1)
+  $arrowLeft: left, right, -($size / 2), $size
+  @each $name, $border, $top, $left in $arrowUp, $arrowDown, $arrowRight, $arrowLeft
+    .arrow-#{$name}
+      display: block
+      position: relative
+      width: 0
+      height: 0
+      left: #{$size}px
+      border: #{$size}px solid transparent
+      border-#{$border}-color: #27ae60
+      &::after
+        content: ""
+        position: absolute
+        top: #{$top}px
+        left: #{$left}px
+        width: #{$size}px
+        height: #{$size}px
+        background-color: #27ae60

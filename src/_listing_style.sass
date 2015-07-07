@@ -1,0 +1,22 @@
+.remark-slide-content
+  /*
+   * Listings
+   */
+  ul>li
+    list-style: none
+    position: relative
+    margin: 0.4em 0
+    &::before
+      content: "＊"
+      position: absolute
+      left: -1.3em
+      color: #c0392b
+    >ul>li
+      list-style-type: disc
+      &::before
+        content: ""
+        display: none
+    >ul>li
+      list-style-type: circle
+  ol>li
+    margin: 0.4em 0

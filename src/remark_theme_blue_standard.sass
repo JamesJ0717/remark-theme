@@ -5,6 +5,12 @@
 body
   font-family: 'Helvetica Neue Light', 'Helvetica Light', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', 'Meiryo', sans-serif
 
+@import 'listing_style'
+@import 'link_text'
+@import 'decorative_classes'
+@import 'user_configurable_styles'
+@import 'icons'
+
 /*
  * Slide Settings
  */
@@ -17,6 +23,20 @@ body
   background-size: cover !important
   // set background image to be centered
   background-position: center !important
+  // code block
+  .remark-code,
+  .remark-inline-code
+    font-family: 'Ubuntu Mono'
+  .remark-code
+    padding: 1em !important
+    border-radius: 10px
+    background-color: #ced4d8 !important
+    word-wrap: break-word
+  // slide number
+  .remark-slide-number
+    font-size: 0.8em
+    bottom: 0.1em
+    right: 0.5em
   &.inverted
     // lighter font coloring for dark background image
     color: #fff
@@ -30,9 +50,6 @@ body
   /*
    * Font size and margin settings
    */
-  h1
-    font-size: 2.5em
-
   h2
     font-size: 1.7em
 
@@ -46,34 +63,6 @@ body
   h5,
   p
     margin: 0.5em 0
-  /*
-   * Link text
-   */
-  a
-    color: #000
-    &:hover
-      color: #888
-  /*
-   * Listings
-   */
-  ul>li
-    list-style: none
-    position: relative
-    margin: 0.4em 0
-    &::before
-      content: "＊"
-      position: absolute
-      left: -1.3em
-      color: #c0392b
-    >ul>li
-      list-style-type: disc
-      &::before
-        content: ""
-        display: none
-    >ul>li
-      list-style-type: circle
-  ol>li
-    margin: 0.4em 0
   /*
    * Emphasized text
    */
@@ -129,91 +118,6 @@ body
         border: 2px solid #ced4d8
 
 /*
- * Decorative classes
- */
-.remark-slide-content
-  /*
-   * Vertical centered text
-   */
-  .vertical-center
-    display: table
-    table-layout: fixed
-    height: 85%
-    width: 100%
-    &::before,
-    &::after
-      display: table-row
-      content: ''
-    >*
-      display: table-cell
-      height: auto
-      vertical-align: middle
-  &.blank
-    .vertical-center
-      height: 100%
-  /*
-   * Bold text
-   */
-  .bold
-    font-weight: bold
-  /*
-   * Quotation
-   */
-  .quote
-    font-family: serif
-    font-style: italic
-    &::before
-      content: open-quote
-    &::after
-      content: close-quote
-  /*
-   * Footnote
-   */
-  .footnote
-    color: #888
-    font-size: 0.7em
-  /*
-   * Horizontal layout
-   */
-  .horizontal
-    display: table
-    width: 100%
-    >*
-      display: table-cell
-      vertical-align: middle
-      padding: 1em
-  /*
-   * Code block
-   */
-  .remark-code,
-  .remark-inline-code
-    font-family: 'Ubuntu Mono'
-  .remark-code
-    padding: 1em !important
-    border-radius: 10px
-    background-color: #ced4d8 !important
-    word-wrap: break-word
-  /*
-   * Slide number settings
-   */
-  .remark-slide-number
-    font-size: 0.8em
-    bottom: 0.1em
-    right: 0.5em
-  /*
-   * Image sizing (Deprecated)
-   */
-  .small img
-    max-height: 10em
-    min-height: 10em
-  .middle img
-    max-height: 15em
-    min-height: 15em
-  .large img
-    max-height: 20em
-    min-height: 20em
-
-/*
  * Title page style
  */
 .remark-slide-content.title
@@ -229,6 +133,7 @@ body
     height: 35%
     background-color: #2980b9
   h1
+    font-size: 2.5em
     height: 65%
     padding-top: 23%
     margin: 0 0 0.7em 0
@@ -271,68 +176,3 @@ body
     z-index: 1
     margin: 0
     padding: 0.25em 0 0.6em 0.5em
-
-/*
- * User-configurable styles
- */
-$positionNames: top, left, bottom, right
-$sizeNames: tiny, small, middle, large
-$fontSizes: 0.5em, 0.7em, 1em, 1.3em
-$marginSizes: 0.5em, 1em, 2em, 4em
-$paddingSizes: 0.5em, 1em, 2em, 4em
-$imageSizes: 5em, 10em, 15em, 20em
-.remark-slide-content
-  $i: 1
-  @each $size in $sizeNames
-    // font size
-    .font-#{$size}
-      font-size: nth($fontSizes, $i)
-    // image size
-    .image-#{$size} img
-      max-height: nth($imageSizes, $i)
-      min-height: nth($imageSizes, $i)
-    $i: $i + 1
-  $i: 1
-  @each $position in $positionNames
-    // margin and padding size
-    @each $size in $sizeNames
-      .margin-#{$position}-#{$size}
-        margin-#{$position}: nth($marginSizes, $i)
-      .padding-#{$position}-#{$size}
-        padding-#{$position}: nth($paddingSizes, $i)
-      $i: $i + 1
-    $i: 1
-    // fixed positions
-    .fixed-#{$position}
-      position: fixed
-      #{$position}: 0
-
-/*
- * Icons
- */
-.remark-slide-content
-  /*
-   * Arrow icon
-   */
-  $size: 24
-  $arrowUp: up, bottom, ($size - 1), -($size / 2)
-  $arrowDown: down, top, -($size * 2 - 1), -($size / 2)
-  $arrowRight: right, left, -($size / 2), -($size * 2 - 1)
-  $arrowLeft: left, right, -($size / 2), $size
-  @each $name, $border, $top, $left in $arrowUp, $arrowDown, $arrowRight, $arrowLeft
-    .arrow-#{$name}
-      display: block
-      position: relative
-      width: 0
-      height: 0
-      left: #{$size}px
-      border: #{$size}px solid transparent
-      border-#{$border}-color: #27ae60
-      &::after
-        content: ""
-        position: absolute
-        top: #{$top}px
-        left: #{$left}px
-        width: #{$size}px
-        height: #{$size}px
-        background-color: #27ae60

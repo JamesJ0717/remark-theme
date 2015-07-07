@@ -1,0 +1,121 @@
+/*
+ * Font settings
+ */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic)
+body
+  font-family: 'Times New Roman', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', '游明朝', 'YuMincho', serif
+
+$front_color: rgb(171, 114, 58)
+$background_color: rgb(194, 23, 37)
+
+@import 'listing_style'
+@import 'link_text'
+@import 'decorative_classes'
+@import 'user_configurable_styles'
+@import 'icons'
+
+/*
+ * Slide Settings
+ */
+.remark-slide-content
+  // set font size default
+  font-size: 1.3em
+  // padding of slide
+  padding: 30px 1em
+
+/*
+ * Style of elements
+ */
+.remark-slide-content
+  /*
+   * Font size and margin settings
+   */
+  h2
+    font-size: 1.5em
+  h3
+    font-size: 1.2em
+
+  h1,
+  h2,
+    font-weight: normal
+
+  h3,
+  h4,
+  h5,
+  p
+    margin: 0.5em 0
+  /*
+   * Emphasized text
+   */
+  h4
+    padding: 0.5em 1em
+    font-size: 1.25em
+    font-weight: normal
+    border: 3px solid $front_color
+    border-radius: 10px
+    text-align: center
+
+/*
+ * Title page style
+ */
+.remark-slide-content.title
+  text-align: center
+  vertical-align: middle
+  h1
+    font-size: 1.8em
+    letter-spacing: 0.05em
+    margin-bottom: 0.3em
+  p
+    margin: 0
+    font-size: 1em
+
+/*
+ * Default page style
+ */
+.remark-slide-content:not(.blank)
+  $circle_size: 20px
+  $circle_position: $circle_size / 2
+  &::before,
+  &::after
+    content: ""
+    z-index: 0
+    position: absolute
+    width: 110%
+    height: 40px
+    background-color: $front_color
+    background-image: radial-gradient(closest-side, transparent 98%, $background_color 99%), radial-gradient(closest-side, transparent 98%, $background_color 99%)
+    background-size: $circle_size $circle_size
+    background-position: 0 0, $circle_position $circle_position
+  &::before
+    top: -10px
+    left: -5%
+  &::after
+    bottom: -10px
+    left: -5%
+  .remark-slide-number
+    z-index: 1
+    color: #fff
+    font-weight: bold
+    opacity: 1.0
+    font-size: 0.7em
+    bottom: 0.1em
+    right: 0.5em
+  h2
+    position: relative
+    padding-left: 1.2em
+    &::before
+      content: ""
+      position: absolute
+      left: 0em
+      top: 0.5em
+      width: $circle_size
+      height: $circle_size
+      background-color: $front_color
+      background-image: radial-gradient(closest-side, transparent 98%, $background_color 99%), radial-gradient(closest-side, transparent 98%, $background_color 99%)
+      background-size: $circle_size $circle_size
+      background-position: 0 0, $circle_position $circle_position
+      transform: rotate(45deg)
+      -o-transform: rotate(45deg)
+      -ms-transform: rotate(45deg)
+      -moz-transform: rotate(45deg)
+      -webkit-transform: rotate(45deg)
