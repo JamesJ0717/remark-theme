@@ -18,6 +18,10 @@ $imageSizes: 5em, 10em, 15em, 20em
       max-height: nth($imageSizes, $i)
       min-height: nth($imageSizes, $i)
     $i: $i + 1
+  // other image size
+  .image-width-max img
+    max-width: 100%
+    min-width: 100%
   $i: 1
   @each $position in $positionNames
     // margin and padding size
